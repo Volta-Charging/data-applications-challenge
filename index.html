@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volta App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+  <div class="content">
+    <div class="column left">
+      <h1 class="title">Volta Station Map</h1>
+      <div id="hacker-list">
+        <input class="search" placeholder="Search by name/address/city/state/zip code" />
+        <div class="sort-control">
+          <div class="reset-div"><a id="reset">Reset Map</a></div>
+          <div class="sort-div"><span class="sort" data-sort="name">Sort by name</span></div>
+        </div>
+        <ol class="list"></ol>
+      </div>
+    </div>
+    <div class="column right">
+      <div id="mapid"></div>
+    </div>
+  </div>
+</body>
