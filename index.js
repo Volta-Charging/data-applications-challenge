@@ -49,8 +49,13 @@ window.onload = function() {
 				// Add marker to map
 				var marker = L.marker([coord[1], coord[0]]);
 				marker.addTo(mymap);
-				var address = station["street_address"] + ", " + station["city"]; 
-				address += ", " + station["state"] + ", " + station["zip_code"].toString();
+				var address = "";
+				if (station["street_address"] != null && station["city"] != null && station["state"] != null && station["zip_code"] != null) {
+					address += station["street_address"] + ", " + station["city"]; 
+					address += ", " + station["state"] + ", " + station["zip_code"].toString();
+				} else {
+					address += station["location"]["coordinates"].toString();
+				}
 				var label = "<b>" + station["name"] + "</b><br>" + address;
 				marker.bindPopup(label);
 				marker.on('click', function(e) {
