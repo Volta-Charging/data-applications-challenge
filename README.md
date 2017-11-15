@@ -1,28 +1,10 @@
-# Volta Code Challenge
-> The goal of this challenge is to demonstrate your skills, with a tool of your choice, taking data and turning it into something meaningful.
+# Volta Map
+Displays Volta Stations on a map, with the ability to search for stations.
+[Live site](https://michaeltamaki.github.io/data-applications-challenge/)
 
-## Problem
-We have a publicly available endpoint, documented here:
-http://docs.voltaapi.com/api/#get--stations.
-Build an interface that exposes this data in whatever form you like.
+## Design
+My interface exposes Station data by displaying the locations of all stations on a map, as well as providing a searchable list to find stations by name, address, city, state, or zip code. Clicking on markers or station names in the list will open a popup on the map with detail and zoom in. All functionality is done in the frontend with vanilla HTML, CSS, and Javascript.
 
-### Requirements
-- Spend no more than a couple of hours on this, focus on one feature is a plus
-- Deliver in a method that is easy for us to consume
-- Commit history showing your thought/development process is always interesting
-
-If you have any questions do not hesitate to reach out via email or phone. In consideration of your schedule, take as long as you need to return the challenge. 
-
-### Some examples/ideas for inspiration:
-- Display the stations on a map
-- Render a searchable table of the stations
-- Aggregate data about the stations and display a high-level metric
-
-## Tips and Tricks
-We don't spend much time reinventing wheels here at Volta. Depending on the meaning you would like to derive from our data, find a tool or library that helps you express it without writing an excessive amount of code or re-implementing existing technology.
-
-Conversely, if you already have a tool or library in mind: show off your skills by using something you know when to provide new insight into our data. Engineering hours are expensive so we like to find a middle-ground between correctness and efficiency.
-
-## Solutions
-> Make a PR to add your solution to this list if you would like to have it publicly posted
-- Nothing here yet!
+## Technologies Used
+- [Leaflet](http://leafletjs.com/): Displays the map and markers of where all the stations are located
+- [List.js](http://listjs.com/): Creates a sortable and searchable list of stations
