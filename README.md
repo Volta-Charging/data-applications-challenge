@@ -26,6 +26,7 @@ Conversely, if you already have a tool or library in mind: show off your skills 
 ## Solutions
 > Make a PR to add your solution to this list if you would like to have it publicly posted
 - Volta Charging Station Search Bar in ReactJS
+https://ayva.github.io/data-applications-challenge/
 
 
 ##Run Solutions
