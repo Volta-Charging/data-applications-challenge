@@ -25,4 +25,12 @@ Conversely, if you already have a tool or library in mind: show off your skills 
 
 ## Solutions
 > Make a PR to add your solution to this list if you would like to have it publicly posted
-- Nothing here yet!
+- Volta Charging Station Search Bar in ReactJS
+
+
+##Run Solutions
+
+To start local server if your preferred language is ruby run
+ruby -run -e httpd . -p 8080
+Visit
+http://localhost:8080/index.html
