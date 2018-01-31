@@ -1,0 +1,23 @@
+body {
+	font-family: 'Roboto', Helvetica;
+  	font-weight: 400;
+	padding: 20px;
+}
+input {
+	margin: 30px;
+	width: 400px;
+}
+li {
+	list-style: none;
+	
+}
+
+.stationName {
+	font-size: 18px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+.address {
+	font-size: 14px;
+	padding-bottom: 5px;
+}
