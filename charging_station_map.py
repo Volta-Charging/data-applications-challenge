@@ -1,4 +1,5 @@
 """
+Defines class for Volta Charging Station
 """
 
 import requests
@@ -8,12 +9,14 @@ import plotly.plotly as py
 class VoltaChargingStationMap(object):
     def __init__(self):
         self.plot_data = {'lat':[], 'lon':[], 'text':[]}
+        # TODO: make this data secure
         plotly.tools.set_credentials_file(username='DataChallenge', api_key='X554PK1cY0po0MNamO4D')
 
     def get_api_data(self, url):
         # get all data for charging station, this could be potenially slow, although right now seems fine
         r = requests.get(url)
         self.api_data = r.json()
+        # call function convert api data to transform it for plotting
         self.convert_api_to_plot_data()
 
     def convert_api_to_plot_data(self):
@@ -28,6 +31,7 @@ class VoltaChargingStationMap(object):
             self.plot_data['text'].append(text)
 
     def plot_map(self):
+        # define plotly data for charging station
         data = [ dict(
             type = 'scattergeo',
             lon = self.plot_data['lon'],
@@ -50,11 +54,12 @@ class VoltaChargingStationMap(object):
             )
         ))]
 
+        # define plotly map layout for charging station
         layout = dict(
             title = 'Volta Charging Station<br>(Hover for Address)',
             colorbar = True,
             geo = dict(
-                scope='north america',
+                scope='world',
                 projection=dict(type = 'conic conformal',
                             rotation = dict(lon = -100)),
                 showland = True,
@@ -62,10 +67,25 @@ class VoltaChargingStationMap(object):
                 subunitcolor = "rgb(217, 217, 217)",
                 countrycolor = "rgb(217, 217, 217)",
                 countrywidth = 0.5,
-                subunitwidth = 0.5
+                subunitwidth = 0.5,
+                showcountries = True,
+                resolution = 50,
+                lonaxis = dict(
+                    showgrid = True,
+                    gridwidth = 0.5,
+                    range= [ -140.0, -55.0 ],
+                    dtick = 5
+                ),
+                lataxis = dict (
+                    showgrid = True,
+                    gridwidth = 0.5,
+                    range= [ 20.0, 60.0 ],
+                    dtick = 5
+                )
             ),
         )
 
+        # plot the actual map
         fig = dict( data=data, layout=layout)
         py.plot( fig, validate=False, filename='Volta Charging Station' )
 
