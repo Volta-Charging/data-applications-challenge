@@ -37,6 +37,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4'
     ],
+    scripts = ['charging_station_map'],
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
     install_requires=requirements

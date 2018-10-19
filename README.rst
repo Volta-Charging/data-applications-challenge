@@ -19,7 +19,9 @@ Example Usage for the program
 =========================
 Run below command:
 
-python charging_station_map.py
+./charging_station_map
+(if for some reason its doesn't show up in your path, please do a find to search
+for this file and run it)
 
 This should open a browser window with map of charging stations
 
